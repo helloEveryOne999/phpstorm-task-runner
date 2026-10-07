@@ -1,0 +1,23 @@
+<idea-plugin>
+  <id>com.flashexpress.oa-task-action-runner</id>
+  <name>Task Action Runner</name>
+  <vendor>Flash Express</vendor>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.jetbrains.php</depends>
+  <depends>org.jetbrains.plugins.terminal</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <notificationGroup id="Task Action Runner" displayType="BALLOON" isLogByDefault="true"/>
+  </extensions>
+
+  <actions>
+    <action id="PhpTaskRunner.RunCurrentAction"
+            class="com.flashexpress.oataskrunner.RunCurrentTaskAction"
+            text="运行当前 Task Action"
+            description="在新终端标签中运行当前 Phalcon Task Action"
+            icon="com.intellij.terminal.icons.TerminalIcons.OpenTerminal_13x13">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+  </actions>
+</idea-plugin>
